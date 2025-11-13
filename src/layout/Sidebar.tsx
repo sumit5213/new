@@ -28,14 +28,13 @@ export const Sidebar: React.FC<SidebarProps> = ({ isMobileOpen }) => {
             className="flex items-center justify-between w-full px-3 py-2.5 rounded-md text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700"
           >
             <span className="flex items-center gap-3">
-              {navigationItems.map((item) => (
-                <item.icon />  // works perfectly
-              ))}
+              {item.icon}
               <span className="font-medium">{item.name}</span>
             </span>
             <svg
-              className={`w-5 h-5 transition-transform duration-200 ${isOpen ? "rotate-90" : ""
-                }`}
+              className={`w-5 h-5 transition-transform duration-200 ${
+                isOpen ? "rotate-90" : ""
+              }`}
               fill="currentColor"
               viewBox="0 0 20 20"
             >
@@ -47,8 +46,9 @@ export const Sidebar: React.FC<SidebarProps> = ({ isMobileOpen }) => {
             </svg>
           </button>
           <ul
-            className={`overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? "max-h-96" : "max-h-0"
-              }`}
+            className={`overflow-hidden transition-all duration-300 ease-in-out ${
+              isOpen ? "max-h-96" : "max-h-0"
+            }`}
           >
             {item.subItems.map((sub) => (
               <li key={sub.name} className="mt-1">
@@ -71,9 +71,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isMobileOpen }) => {
           href={item.href}
           className="flex items-center gap-3 px-3 py-2.5 rounded-md text-gray-700 font-medium hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700"
         >
-          {navigationItems.map((item) => (
-            <item.icon />  // works perfectly
-          ))}
+          {item.icon}
           {item.name}
         </a>
       </li>

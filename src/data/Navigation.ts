@@ -11,13 +11,13 @@ import {
 export interface NavItem {
   name: string;
   href: string;
-  icon: React.ReactNode; // Icon field is unchanged
+  icon: React.ElementType; // Icon field is unchanged
   subItems?: NavItem[];
 }
 
 
 export const navigationItems: NavItem[] = [
-  { name: "Dashboard", href: "#dashboard", icon: <DashboardIcon /> },
+  { name: "Dashboard", href: "#dashboard", icon: DashboardIcon },
   { name: "Orders", href: "#orders", icon: <OrdersIcon /> },
   { name: "Profile", href: "#profile", icon: <ProfileIcon /> },
   {
