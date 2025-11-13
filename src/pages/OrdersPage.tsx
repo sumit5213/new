@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import ordersData from "../data/orders.json";
-import { ordersConfig, type OrderColumnConfig } from "../data/orders.config";
+import { ordersConfig } from "../data/orders.config";
 import { Switcher } from "../components/Switchers/Switcher";
-import { MoveIcon } from "../components/common/Icons";
+import MoredotIcon from "../icons/moredot.svg?react";
 
 // Function to get Tailwind classes for status (Unchanged)
 const getStatusClasses = (status: string): string => {
@@ -164,7 +164,7 @@ export const OrdersPage: React.FC = () => {
                 >
                   <td className="px-3 py-4 whitespace-nowrap text-center cursor-move">
                     <div className="inline-block">
-                      <MoveIcon />
+                      <MoredotIcon className="w-5 h-5 text-gray-400 dark:text-gray-500" />
                     </div>
                   </td>
                   {visibleConfig.map((col) => (

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { navigationItems, type NavItem } from "../data/Navigation";
+import AngleRightIcon from "../icons/angle-right.svg?react";
 
 interface SidebarProps {
   isMobileOpen: boolean;
@@ -31,19 +32,11 @@ export const Sidebar: React.FC<SidebarProps> = ({ isMobileOpen }) => {
               {item.icon}
               <span className="font-medium">{item.name}</span>
             </span>
-            <svg
+            <AngleRightIcon
               className={`w-5 h-5 transition-transform duration-200 ${
                 isOpen ? "rotate-90" : ""
               }`}
-              fill="currentColor"
-              viewBox="0 0 20 20"
-            >
-              <path
-                fillRule="evenodd"
-                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                clipRule="evenodd"
-              />
-            </svg>
+            />
           </button>
           <ul
             className={`overflow-hidden transition-all duration-300 ease-in-out ${

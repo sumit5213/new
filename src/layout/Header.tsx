@@ -1,6 +1,7 @@
 import React from "react";
 import { DropdownUser } from "../components/common/DropdownUser";
 import { DarkModeSwitcher } from "../components/Switchers/DarkModeSwitcher";
+import ListIcon from "../icons/list.svg?react";
 
 interface HeaderProps {
   onToggleMobileSidebar: () => void;
@@ -20,20 +21,7 @@ export const Header: React.FC<HeaderProps> = ({
           className="lg:hidden text-gray-700 dark:text-gray-300"
           aria-label="Toggle menu"
         >
-          <svg
-            className="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M4 6h16M4 12h16m-7 6h7"
-            />
-          </svg>
+          <ListIcon className="w-6 h-6" />
         </button>
 
         {/* Logo - visible on mobile header, hidden on desktop (sidebar has it) */}

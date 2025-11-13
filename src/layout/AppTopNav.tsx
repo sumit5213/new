@@ -2,6 +2,8 @@ import React, { useState, useEffect, useRef } from "react";
 import { navigationItems, type NavItem } from "../data/Navigation";
 import { DropdownUser } from "../components/common/DropdownUser";
 import { DarkModeSwitcher } from "../components/Switchers/DarkModeSwitcher";
+import AngleDownIcon from "../icons/angle-down.svg?react";
+import ListIcon from "../icons/list.svg?react";
 
 export const AppTopNav: React.FC<{ onSwitchLayout: () => void }> = ({
   onSwitchLayout,
@@ -51,19 +53,11 @@ export const AppTopNav: React.FC<{ onSwitchLayout: () => void }> = ({
               {item.icon}
               {item.name}
             </span>
-            <svg
+            <AngleDownIcon
               className={`w-4 h-4 ml-1 transition-transform ${
                 isOpen ? "rotate-180" : ""
               }`}
-              fill="currentColor"
-              viewBox="0 0 20 20"
-            >
-              <path
-                fillRule="evenodd"
-                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                clipRule="evenodd"
-              />
-            </svg>
+            />
           </button>
           {isOpen && (
             <div
@@ -131,20 +125,7 @@ export const AppTopNav: React.FC<{ onSwitchLayout: () => void }> = ({
             className="lg:hidden text-gray-700 dark:text-gray-300"
             aria-label="Toggle navigation"
           >
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4 6h16M4 12h16m-7 6h7"
-              />
-            </svg>
+            <ListIcon className="w-6 h-6" />
           </button>
         </div>
       </div>
